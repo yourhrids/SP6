@@ -1,0 +1,520 @@
+@font-face {
+  font-family: "Integral CF Bold";
+  src: url(/fonts/Fontspring-DEMO-integralcf-bold.otf);
+}
+
+@font-face {
+  font-family: "satoshi";
+  src: url(/fonts/Satoshi-Regular.ttf);
+  src: url(/fonts/Satoshi-Medium.ttf);
+  src: url(/fonts/Satoshi-Bold.ttf);
+}
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-font: "Integral CF Bold";
+  --secondary-font: "Satoshi";
+
+  --primary-color: #000;
+  --secondary-color: rgba(0, 0, 0, 0.6);
+  --rating-color: #ffc633;
+}
+.space-50 {
+  padding: 30px;
+}
+h1 {
+  font-family: var(--primary-font);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+  color: var(--primary-color);
+}
+h2 {
+  font-family: var(--primary-font);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--primary-color);
+}
+h3 {
+  font-family: var(--secondary-font);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--primary-color);
+}
+h4 {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--primary-color);
+}
+h5 {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 110% */
+  color: var(--primary-color);
+}
+p {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  color: var(--secondary-font);
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0;
+}
+.text-content {
+  text-align: center;
+  padding-bottom: 50px;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+/* For scroll smooth (means click one menu and go its area by scrollling) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== Custom scroll bar ========== */
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* 1rem = 16pixels So, .25rem = 4pixels*/
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+/* ======================== HEADER ======================== */
+header,
+main {
+  overflow: hidden;
+}
+.header-top {
+  height: 6vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-top p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  margin: 0;
+}
+
+.header-top span {
+  font-weight: 500;
+  text-decoration: underline;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.main-header {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.mainmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mainmenu li {
+  display: inline-block;
+  position: relative;
+}
+
+.mainmenu li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  display: block;
+  margin-left: 25px;
+}
+
+.serach-btn input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.serach-btn input[type="text"] {
+  border: none;
+  background: #f0f0f0;
+  padding: 12px 16px;
+  border-radius: 65px;
+  width: 500px;
+  height: 40px;
+  padding-left: 40px;
+}
+
+.serach-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.serach-btn i {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.serach-btn input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.mainmenu li i {
+  font-size: 16px;
+}
+
+.profile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile li {
+  display: inline-block;
+  position: relative;
+}
+
+.profile li a {
+  cursor: pointer;
+  display: block;
+}
+
+.profile li img {
+  height: 24px;
+  width: 24px;
+}
+
+.main-header .logo img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* ======================== HOME BANNER ======================== */
+.home-bg {
+  background-image: url(/assets/hero-banner.jpg);
+}
+.home-counter-area {
+  display: flex;
+  align-items: center;
+}
+
+.home-counter-area .counter p,
+.home-counter-area .counter h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.home-counter-area .counter:nth-child(2) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 30px;
+  margin: 0 30px;
+}
+
+.home-banner {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home-text-content .home-btn {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 210px;
+  height: 52px;
+  padding: 16px 54px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 62px;
+  margin: 30px 0;
+}
+
+.home-text-content p {
+  margin: 0;
+  padding-top: 25px;
+}
+
+/* ============== BRAND Section ============== */
+.brand-section {
+  background: #000;
+}
+
+.brand-item {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 130px;
+}
+
+.brand-item img {
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* ============= ARAIVALS ============= */
+.araivals-image-1 {
+  background-image: url(/assets/new-araivals/img1.png);
+}
+.araivals-image-2 {
+  background-image: url(/assets/new-araivals/img2.png);
+}
+.araivals-image-3 {
+  background-image: url(/assets/new-araivals/img3.png);
+}
+.araivals-image-4 {
+  background-image: url(/assets/new-araivals/img4.png);
+}
+
+.araivals-image-5 {
+  background-image: url(/assets/new-araivals/img5.png);
+}
+.araivals-image-6 {
+  background-image: url(/assets/new-araivals/img6.png);
+}
+.araivals-image-7 {
+  background-image: url(/assets/new-araivals/img7.png);
+}
+.araivals-image-8 {
+  background-image: url(/assets/new-araivals/img8.png);
+}
+
+.araivals-image {
+  max-width: 350px;
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.single-araivals-content {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.single-araivals-content h5 {
+  text-transform: capitalize;
+}
+
+.single-araivals-content .rating-area ul {
+  margin: 0;
+  padding: 0;
+}
+
+.single-araivals-content .rating-area li {
+  display: inline-block;
+  position: relative;
+}
+
+.single-araivals-content .rating-area li i {
+  color: var(--rating-color);
+}
+
+.single-araivals-content .rating-area li span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.single-araivals-item h4 del {
+  color: rgba(0, 0, 0, 0.4);
+  margin-left: 10px;
+}
+
+.single-araivals-item h4 span {
+  color: #f33;
+  font-family: Satoshi;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: rgba(255, 51, 51, 0.1);
+  padding: 6px 14px;
+  border-radius: 62px;
+  margin-left: 10px;
+}
+
+.single-araivals-item h4 {
+  display: flex;
+  align-items: center;
+}
+
+.single-araivals-content .rating-area {
+  margin: 7px 0;
+}
+.araival-btn {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 16px 54px;
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 50px;
+  display: block;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.araival-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.divider-sep {
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 50px 0;
+}
+
+/* ========== Dress Style ========== */
+.style-bg-1 {
+  background-image: url(/assets/style/img1.png);
+}
+.style-bg-2 {
+  background-image: url(/assets/style/img2.png);
+}
+.style-bg-3 {
+  background-image: url(/assets/style/img3.png);
+}
+.style-bg-4 {
+  background-image: url(/assets/style/img4.png);
+}
+
+.dress-style {
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.container-bg {
+  background: #f0f0f0;
+  border-radius: 50px;
+  padding: 40px 30px;
+  margin-top: 40px;
+}
+.dress-style h3 {
+  color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px 0 0 30px;
+}
+.single-dress-style {
+  margin: 20px 0;
+}
+
+/* Testimonial area */
+.single-testimonial-item .rating-area ul {
+  margin: 0;
+  padding: 0;
+}
+
+.single-testimonial-item .rating-area li {
+  display: inline-block;
+  color: var(--rating-color);
+}
+
+.single-testimonial-item h5 i {
+  color: rgba(1, 171, 49, 1);
+  margin-left: 5px;
+}
+
+.single-testimonial-item {
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 30px 20px;
+}
+
+.single-testimonial-item h5 {
+  margin: 8px 0;
+}
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
